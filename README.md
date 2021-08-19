@@ -1,4 +1,4 @@
-# Simple Referrals system for Laravel , modded version 
+# Simple Referrals system for Laravel 8 , modded version 
 
 Based on original https://github.com/pdazcom/laravel-referrals
 
