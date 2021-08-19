@@ -137,6 +137,10 @@ If you want to list all the users for a given Referral Link, simply use
 $referralLink->referredUsers()
 ```
 
+## Contact
+
+---
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
