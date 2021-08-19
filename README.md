@@ -137,10 +137,6 @@ If you want to list all the users for a given Referral Link, simply use
 $referralLink->referredUsers()
 ```
 
-## Security
-
-If you discover any security related issues, please email kostya.dn@gmail.com instead of using the issue tracker.
-
 ## Credits
 
 - [Konstantin A.][link-author]
