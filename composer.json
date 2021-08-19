@@ -1,0 +1,36 @@
+{
+    "name": "alinrzv/laravel-referrals",
+    "description": "A referrals system for a laravel projects.",
+    "homepage": "http://github.com/alinrzv/laravel-referrals",
+    "type": "library",
+    "version": "1.0",
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "^8.0",
+        "ramsey/uuid": "^4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Best Digital",
+            "email": "hidev@bestdigital.ro"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pmn\\Referrals\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pmn\\Referrals\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pmn\\Referrals\\Providers\\ReferralsServiceProvider"
+            ]
+        }
+    }
+}
