@@ -2,8 +2,6 @@
     "name": "alinrzv/laravel-referrals",
     "description": "A referrals system for a laravel projects.",
     "homepage": "http://github.com/alinrzv/laravel-referrals",
-    "type": "library",
-    "version": "1.0",
     "require": {
         "php": "^7.0",
         "laravel/framework": "^8.0",
