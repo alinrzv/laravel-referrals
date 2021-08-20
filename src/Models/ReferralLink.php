@@ -33,7 +33,7 @@ class ReferralLink extends Model
         return static::firstOrCreate([
             'user_id' => $user->id,
             'referral_program_id' => $program->id
-        ])->first();
+        ]);
     }
 
     public function getLinkAttribute()

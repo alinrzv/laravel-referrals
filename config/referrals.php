@@ -2,6 +2,6 @@
 
 return [
     'programs' => [
-        'example' => \Pmn\Referrals\Programs\ExampleProgram::class,
+        'example' => App\ReferralPrograms\ExampleProgram::class,
     ]
 ];
