@@ -65,6 +65,8 @@ In event provider app/Providers/EventServiceProvider.php define event and listen
 
 ```
 
+```
+
 Then in `Http/Controllers/Auth/RegisterController.php` add event dispatcher:
 
 ```
