@@ -3,18 +3,10 @@
 namespace Pmn\Referrals\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider;
+use Illuminate\Support\Facades\Event;
 
 class ReferralsServiceProvider extends EventServiceProvider
 {
-
-    protected $listen = [
-        'Pmn\Referrals\Events\UserReferred' => [
-            'Pmn\Referrals\Listeners\ReferUser',
-        ],
-        'Pmn\Referrals\Events\ReferralCase' => [
-            'Pmn\Referrals\Listeners\RewardUser',
-        ],
-    ];
 
     /**
      * Register bindings in the container.
@@ -29,8 +21,26 @@ class ReferralsServiceProvider extends EventServiceProvider
      */
     public function boot()
     {
-        parent::boot();
+    
+    	parent::boot();
+    	
+    	/*
+	    protected $listen = [
+	        'Pmn\Referrals\Events\UserReferred' => [
+	            'Pmn\Referrals\Listeners\ReferUser',
+	        ],
+	        'Pmn\Referrals\Events\ReferralCase' => [
+	            'Pmn\Referrals\Listeners\RewardUser',
+	        ],
+	    ];
+    
+	The $listen mapping is only used to register listeners at an app-level inside App\Providers\EventServiceProvider, not within a package's ServiceProvider.
+	The proper way to register an event listener from within a package's ServiceProvier in my opinion is to simply use the Event facade in it's boot function.
+	*/
 
+	Event::listen('Pmn\Referrals\Events\UserReferred', 'Pmn\Referrals\Listeners\ReferUser');
+	Event::listen('Pmn\Referrals\Events\ReferralCase', 'Pmn\Referrals\Listeners\RewardUser');
+        
         // resolve config
         $this->publishes([__DIR__ . '/../../config/referrals.php' => config_path('referrals.php')], 'config');
 

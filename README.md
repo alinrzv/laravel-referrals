@@ -54,17 +54,6 @@ Add `Pmn\Referrals\Traits\ReferralsMember` to your `Users` model:
         ...
     }
 
-
-```
-
-In event provider app/Providers/EventServiceProvider.php define event and listener under $listen property.
-
-        'Pmn\Referrals\Events\UserReferred' => [
-	    'Pmn\Referrals\Listeners\ReferUser',
-	],
-
-```
-
 ```
 
 Then in `Http/Controllers/Auth/RegisterController.php` add event dispatcher:
