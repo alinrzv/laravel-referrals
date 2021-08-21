@@ -12,10 +12,18 @@ This package was created based on the [lesson](https://blog.damirmiladinov.com/l
 author is Damir Miladinov, with some minor changes, for which I express my gratitude to him.
 
 ## Installation
-Via Composer
+Via Composer Json > Repositories :
+
+Add repository to composer.json and do : composer require alinrzv/laravel-referrals
 
 ``` bash
-$ composer require pmn/laravel-referrals
+    "repositories":[
+
+	    {
+	        "type": "vcs",
+	        "url": "https://github.com/alinrzv/laravel-referrals.git"
+	    }
+	]
 ```
 
 Then in config/app.php add service-provider and facade alias:
