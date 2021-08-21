@@ -12,11 +12,11 @@ This package was created based on the [lesson](https://blog.damirmiladinov.com/l
 author is Damir Miladinov, with some minor changes, for which I express my gratitude to him.
 
 ## Installation
-Via Composer Json > Repositories :
+Via Composer Json > Repositories 
 
-Add repository to composer.json and do : composer require alinrzv/laravel-referrals
+Add repository to composer.json : 
 
-``` bash
+```
     "repositories":[
 
 	    {
@@ -24,6 +24,12 @@ Add repository to composer.json and do : composer require alinrzv/laravel-referr
 	        "url": "https://github.com/alinrzv/laravel-referrals.git"
 	    }
 	]
+```
+
+And install using require as usual :
+
+``` bash
+composer require alinrzv/laravel-referrals
 ```
 
 Then in config/app.php add service-provider and facade alias:
